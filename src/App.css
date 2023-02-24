@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background: #fff;
+	color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .snow_wrap{
+	height: 100vh;
+	width: 100%;
+	background-image: url('../image/img_pic1.jpg');
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: relative;
+} */
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: 
+  radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+  radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+  radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+	margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  height: 100vh;
+	width: 100%;
+	background-image: url('../image/img_pic1.jpg');
+	background-size: cover;
+	background-position: center bottom; 
+  overflow: auto;
+	position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.index {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.task-create {
+  width: 450px;
+}
+
+.task-update {
+  width: 100%;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-label {
+  margin: 10px;  /* yukardan aşagıya 10px şadan şoldan 0px; */
+}
+
+.task-input {
+  padding: 10px;
+  border: 1px solid #black;
+  border-radius: 10px;
+}
+
+.task-btn {
+  margin: 10px 10px;
+  padding: 10px;
+  height: 60px;
+  border:none;
+  background-color: #222f8b;
   color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-style: inherit;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.task-btn:hover {
+  background-color: #1fb224;
+  transition: inherit 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.update-btn {
+  background-color: blueviolet;
+  
 }
+
+.task-show {
+    border: 2px solid #2f4060;
+    border-radius: 10px;
+    width: 350px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E6E6FA;
+    opacity: 0.7;
+
+}
+.task-show:hover {
+  background-color: #FFFAFA;
+}
+.task-title {
+  margin-bottom: 8px;
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.gorev-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  color: #fff;
+  
+}
+
+.gorev{
+  display: block;
+  margin-left: 15px;
+}
+
+.icon {
+  font-size: xx-large;
+}
+
+.main-content { 
+  border: 1px solid #a2b0a2; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b2a49e;
+}
+
+.btn-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+.btn-delete {
+  padding: 5px;
+  font-size: 15px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF4500;
+  color: white;
+  font-style: inherit;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.btn-update {
+  padding: 5px;
+  font-size: 15px;
+  width: 120px;
+  text-align: -webkit-center;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF8C00;
+  color: white;
+  font-style: inherit;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.btn-all p {
+  display: inline-block;
+  margin-left: 6px;
+}
+
