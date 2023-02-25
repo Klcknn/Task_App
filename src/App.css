@@ -266,19 +266,19 @@ body{
   }
   
   .task-update {
-    width: 90%;
+    width: 100%;
   }
 
   .task-show {
-    width: 90%;
+    width: 100%;
   }
 
   .task-form {
-    width: 90%;
+    width: 100%;
   }
 
   .main-content { 
-    width: 90%;
+    width: 100%;
   }
 
 }
