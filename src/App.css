@@ -275,7 +275,9 @@ body{
     flex-direction: column;
     align-items: center;
   }
-  
+  .task-create h3 {
+    width: 90%;
+  }
   .task-update {
     width: 100%;
   }
