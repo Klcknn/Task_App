@@ -260,7 +260,7 @@ body{
 @media screen and (max-width: 480px) {
   .App {
     height: 100vh;
-    width: 90%;
+    width: 100%;
     overflow: auto;
     position: relative;
     display: flex;
@@ -270,6 +270,7 @@ body{
   
   .task-create {
     width: 100%;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
