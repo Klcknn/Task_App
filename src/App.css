@@ -260,7 +260,7 @@ body{
 @media screen and (max-width: 480px) {
   .App {
     height: 100vh;
-    width: 100%;
+    width: 90%;
     overflow: auto;
     position: relative;
     display: flex;
