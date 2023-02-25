@@ -282,16 +282,35 @@ body{
     width: 100%;
   }
 
-  .task-show {
-    width: 100%;
-  }
-
   .task-form {
     width: 90%;
   }
 
   .main-content { 
     width: 100%;
+  }
+  .task-show {
+    border: 2px solid #2f4060;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #E6E6FA;
+    opacity: 0.7;
+  }
+  
+  .task-title {
+    margin-bottom: 8px;
+  }
+
+  .task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 }
