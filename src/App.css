@@ -236,9 +236,6 @@ body{
 @media screen and (max-width: 768px) {
   .task-create {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   
   .task-update {
@@ -263,6 +260,9 @@ body{
 @media screen and (max-width: 480px) {
   .task-create {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .task-update {
