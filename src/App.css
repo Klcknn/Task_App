@@ -281,11 +281,11 @@ body{
   }
 
   .task-show {
-    width: 90%;
+    width: 100%;
   }
 
   .task-form {
-    width: 100%;
+    width: 90%;
   }
 
   .main-content { 
